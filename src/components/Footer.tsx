@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="bg-primary text-primary-foreground py-16">
@@ -12,28 +14,28 @@ const Footer = () => {
           <div>
             <h4 className="font-body text-xs tracking-widest uppercase mb-4 text-primary-foreground/60">Shop</h4>
             <ul className="space-y-2 font-body text-sm text-primary-foreground/80">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">New Arrivals</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Bestsellers</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Clothing</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Accessories</a></li>
+              <li><Link to="/shop" className="hover:text-primary-foreground transition-colors">All Products</Link></li>
+              <li><Link to="/shop?category=Clothing" className="hover:text-primary-foreground transition-colors">Clothing</Link></li>
+              <li><Link to="/shop?category=Bags" className="hover:text-primary-foreground transition-colors">Bags</Link></li>
+              <li><Link to="/shop?category=Accessories" className="hover:text-primary-foreground transition-colors">Accessories</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-body text-xs tracking-widest uppercase mb-4 text-primary-foreground/60">Company</h4>
             <ul className="space-y-2 font-body text-sm text-primary-foreground/80">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">About Us</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Sustainability</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Careers</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Contact</a></li>
+              <li><Link to="/about" className="hover:text-primary-foreground transition-colors">About Us</Link></li>
+              <li><Link to="/collections" className="hover:text-primary-foreground transition-colors">Collections</Link></li>
+              <li><Link to="/about" className="hover:text-primary-foreground transition-colors">Sustainability</Link></li>
+              <li><Link to="/about" className="hover:text-primary-foreground transition-colors">Contact</Link></li>
             </ul>
           </div>
           <div>
             <h4 className="font-body text-xs tracking-widest uppercase mb-4 text-primary-foreground/60">Support</h4>
             <ul className="space-y-2 font-body text-sm text-primary-foreground/80">
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Shipping & Returns</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">FAQ</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Size Guide</a></li>
-              <li><a href="#" className="hover:text-primary-foreground transition-colors">Privacy Policy</a></li>
+              <li><Link to="/about" className="hover:text-primary-foreground transition-colors">Shipping & Returns</Link></li>
+              <li><Link to="/about" className="hover:text-primary-foreground transition-colors">FAQ</Link></li>
+              <li><Link to="/about" className="hover:text-primary-foreground transition-colors">Size Guide</Link></li>
+              <li><Link to="/about" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>

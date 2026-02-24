@@ -1,10 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import { motion } from "framer-motion";
 import ProductCard from "./ProductCard";
 import { products, categories } from "@/data/products";
 
 const ProductGrid = () => {
-  const [activeCategory, setActiveCategory] = useState("All");
+  const [searchParams] = useSearchParams();
+  const categoryParam = searchParams.get("category");
+  const [activeCategory, setActiveCategory] = useState(categoryParam || "All");
+
+  useEffect(() => {
+    if (categoryParam && categories.includes(categoryParam)) {
+      setActiveCategory(categoryParam);
+    }
+  }, [categoryParam]);
 
   const filtered = activeCategory === "All" 
     ? products 
@@ -27,7 +36,6 @@ const ProductGrid = () => {
           </p>
         </motion.div>
 
-        {/* Category filters */}
         <div className="flex justify-center gap-2 mb-12 flex-wrap">
           {categories.map((cat) => (
             <button
@@ -44,7 +52,6 @@ const ProductGrid = () => {
           ))}
         </div>
 
-        {/* Product grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
           {filtered.map((product, index) => (
             <ProductCard key={product.id} product={product} index={index} />
