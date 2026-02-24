@@ -43,7 +43,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 0.45 }}
         >
           <Link
-            to="/"
+            to="/shop"
             className="inline-block bg-primary-foreground text-foreground font-body text-sm font-medium tracking-widest uppercase px-10 py-4 hover:bg-accent hover:text-accent-foreground transition-colors duration-300"
           >
             Shop Now
