@@ -32,10 +32,10 @@ const Footer = () => {
           <div>
             <h4 className="font-body text-xs tracking-widest uppercase mb-4 text-primary-foreground/60">Support</h4>
             <ul className="space-y-2 font-body text-sm text-primary-foreground/80">
-              <li><Link to="/about" className="hover:text-primary-foreground transition-colors">Shipping & Returns</Link></li>
-              <li><Link to="/about" className="hover:text-primary-foreground transition-colors">FAQ</Link></li>
-              <li><Link to="/about" className="hover:text-primary-foreground transition-colors">Size Guide</Link></li>
-              <li><Link to="/about" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link></li>
+              <li><Link to="/shipping-returns" className="hover:text-primary-foreground transition-colors">Shipping & Returns</Link></li>
+              <li><Link to="/faq" className="hover:text-primary-foreground transition-colors">FAQ</Link></li>
+              <li><Link to="/size-guide" className="hover:text-primary-foreground transition-colors">Size Guide</Link></li>
+              <li><Link to="/privacy-policy" className="hover:text-primary-foreground transition-colors">Privacy Policy</Link></li>
             </ul>
           </div>
         </div>
